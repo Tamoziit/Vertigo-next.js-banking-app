@@ -2,7 +2,7 @@ import HeaderBox from '@/components/HeaderBox';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
 
 const Home = () => {
-  const loggedIn = { firstName: "Tamojit" };
+  const loggedIn = { firstName: "Swayamdeep" };
 
   return (
     <section className='home'>
@@ -18,7 +18,7 @@ const Home = () => {
           <TotalBalanceBox
             accounts={[]}
             totalBanks={1}
-            totalCurrentBalance={1250.35}
+            totalCurrentBalance={10000000}
           />
         </header>
       </div>
