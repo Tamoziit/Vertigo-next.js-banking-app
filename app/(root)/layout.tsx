@@ -29,12 +29,11 @@ export default function RootLayout({
             height={30}
           />
           <div>
-            <MobileNav />
+            <MobileNav user={loggedIn} />
           </div>
         </div>
+        {children}
       </div>
-
-      {children}
     </main>
   );
 }
