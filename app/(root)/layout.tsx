@@ -4,14 +4,18 @@ eg: Here, in this use case, We need the sidebar component in root ("/") routes, 
 
 import MobileNav from "@/components/MobileNav";
 import Sidebar from "@/components/Sidebar";
+import { getLoggedInUser } from "@/lib/actions/user.actions";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedIn = { firstName: "Tamojit", lastName: "Das" };
+  const loggedIn = await getLoggedInUser();
+
+  if(!loggedIn) redirect("/sign-in"); //an alternative to router.push without making a component as client component.
 
   return (
     <main className="flex h-screen w-full font-inter">

@@ -41,12 +41,12 @@ const AuthForm = ({ type }: { type: string }) => {
       }
 
       if (type === "sign-in") {
-        /*const response = await signIn({
+        const response = await signIn({
           email: data.email,
           password: data.password
         });
 
-        if(response) router.push('/'); //redirecting to home if signed in successfully*/
+        if(response) router.push('/'); //redirecting to home if signed in successfully
       }
     } catch (error) {
       console.log(error);
@@ -133,7 +133,7 @@ const AuthForm = ({ type }: { type: string }) => {
                       control={form.control}
                       name="dateOfBirth"
                       label="Date of Birth"
-                      placeholder="YYY-MM-DD"
+                      placeholder="YYYY-MM-DD"
                     />
                     <CustomInput
                       control={form.control}
